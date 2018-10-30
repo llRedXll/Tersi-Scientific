@@ -3,11 +3,11 @@
     $email = $_POST['email'];
     $message = $_POST['message'];
     $from = 'From: Tersi Scientific Website'; 
-    $to = 'hector@fe0000.com'; 
-    $subject = 'New Message from Tersi Scientific Form';
+    $to = 'charlie@vanderstahl.com'; 
+    $subject = 'New Message - Tersi Scientific Form';
     $human = $_POST['human'];
 			
-    $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+    $body = "From: $name\n E-Mail: $email\n\n Message:\n $message";
 
     if ($_POST['submit']) {
         if ($name != '' && $email != '') {

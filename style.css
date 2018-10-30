@@ -16,8 +16,14 @@ html body {
 .row {
     display: flex;
 }
+
 .column {
     flex: 50%;
+}
+
+.responsive-img {
+    width: 100%;
+    height: auto;
 }
 
 #header {
@@ -41,13 +47,6 @@ html body {
     color: white;
 }
 
-#header p {
-    float: right;
-    text-transform: uppercase;
-    margin-top: 0;
-
-}
-
 #title {
     position: absolute;
     z-index: 2;
@@ -61,9 +60,14 @@ html body {
     -webkit-transform: translateY(-50%);
     -o-transform: translateY(-50%);
 }
+
 #author {
     font-size: 0.6em;
+    float: right;
+    text-transform: uppercase;
+    margin-top: 0;
 }
+
 .colored-line {
     display: inline-block;
     width: 25%;
@@ -246,7 +250,6 @@ html body {
     position: relative;
     display: flex;
     flex-direction: column;
-
 }
 
 #service-text {
@@ -280,7 +283,7 @@ html body {
     -moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -o-transform: translateY(-50%);
-    
+
 }
 
 .service-icon {
@@ -300,9 +303,9 @@ html body {
 
 .service-blurb h4:after {
     content: ' ';
-    border:1px solid var(--main);
-    width:25px;
-    display:block;
+    border: 1px solid var(--main);
+    width: 25px;
+    display: block;
     margin-top: 7px;
 
 }
@@ -317,16 +320,129 @@ html body {
 #gallery {
     display: flex;
     position: relative;
-    height:100vh;
+    max-height: 100vh;
 }
 
 #gallery h2 {
     position: absolute;
     padding-left: 8%;
+    top: 42%;
+    transform: translateY(-42%);
+    -ms-transform: translateY(-42%);
+    -moz-transform: translateY(-42%);
+    -webkit-transform: translateY(-42%);
+    -o-transform: translateY(-42%);
+}
+
+#image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* ==== Outdoors Section === */
+
+#outdoors {
+    position: relative;
+    margin-bottom: 20%;
+}
+
+#outdoors article:first-of-type {
+    margin-left: 8%;
+    width: 30vw;
+    display: inline-block;
+}
+
+#outdoors article:nth-child(2) {
+    margin-right: 8%;
+    width: 50vw;
+    position: absolute;
+    top: 20%;
+    right: 0;
+}
+
+#outdoors-quote {
+    padding-top: 30px;
+}
+
+#outdoors article:nth-child(2) img {
+    padding-top: 50px;
+}
+
+/* ==== Contact Section === */
+
+#contact {
+    background: url(assets/images/contact-filter-bg@2x.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-text {
+    padding-left: 19%;
+    max-width: 40vw;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -o-transform: translateY(-50%);
+}
+
+.contact-info {
+    text-transform: uppercase;
+}
+
+#contact-text a {
+    text-decoration: none;
+    color: var(--main);
+}
+
+#contact-text a:hover {
+    text-decoration: underline;
+}
+
+#contact-form {
+    position: absolute;
+    top:50%;
+    right:10%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+label {
+    display:block;
+    margin-top:20px;
+    letter-spacing:2px;
+}
+
+input, textarea {
+	width:439px;
+	height:27px;
+	background:#efefef;
+	border:1px solid #dedede;
+	padding:10px;
+	margin-top:3px;
+	font-size:0.9em;
+	color:#3a3a3a;
+}
+
+textarea {
+	height:213px;
+}
+
+input:focus, textarea:focus {
+    border:1px solid var(--main);
+}
+input {
+    display: block;
 }

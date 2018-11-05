@@ -21,6 +21,7 @@ html body {
     display: -webkit-flex;
 
     -webkit-flex-flow: row wrap;
+
 }
 
 .column {
@@ -41,6 +42,7 @@ html body {
     height: 100vh;
     color: white;
     display: flex;
+    transition: all 2000ms ease-in-out 0s;
 }
 
 #header-logo {
@@ -53,7 +55,42 @@ html body {
     color: white;
 }
 
-#title {
+/*Slider styles*/
+.fullBackground {
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.caption {
+    font-size: 30pt;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.caption:after {
+    content: "\A";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #00bbeb;
+    display: inline-block;
+    margin: 0 0 -2px;
+}
+
+/*//////////////////*/
+
+.title {
     position: absolute;
     z-index: 2;
     width: 30vw;
@@ -80,7 +117,7 @@ html body {
     border: 1px solid var(--main);
 }
 
-#title a {
+.title a {
     text-decoration: none;
     display: block;
     color: white;
@@ -88,24 +125,14 @@ html body {
     padding-top: 25px;
 }
 
-#title a img {
+.title a img {
     display: inline-block;
     max-width: 30px;
     padding-left: 5px;
 }
 
-#title a:visited {
+.title a:visited {
     color: var(--wheat);
-}
-
-#title-frame {
-    width: 25%;
-    height: 25%;
-    z-index: 1;
-    position: absolute;
-    left: 45%;
-    top: 50%;
-    transform: translate(-45%, -50%);
 }
 
 .frame-light {
@@ -201,6 +228,7 @@ html body {
 #about {
     padding: 2% 8%;
 }
+
 #about-div {
     display: flex;
     position: relative;
@@ -238,6 +266,34 @@ html body {
     display: block;
     margin-left: -10px;
     padding: 20px 0;
+}
+#divider {
+    border: 1px solid rgba(0, 0, 0, .05);
+    width:85vw;
+}
+/* about bottom text */
+#about-bottom {
+    padding: 4% 8% 6%;
+}
+
+#left-about-text {
+    flex: 30%;
+    padding-right: 50px;
+}
+
+#left-about-text p:first-of-type {
+    font-size: 1.9em;
+    margin-top: 0;
+    margin-bottom: 16px;
+    text-transform: capitalize;
+}
+
+#right-about-text {
+    flex: 60%;
+}
+
+#right-about-text p:first-of-type {
+    margin-top: 0;
 }
 
 /* ==== Services Section === */
@@ -318,27 +374,32 @@ html body {
 }
 
 /* ==== Blurbs Section === */
+#blurb-title {
+    text-align: center;
+    padding-top: 50px;
+}
+
 #blurbs {
     display: flex;
     flex-flow: row wrap;
     position: relative;
     max-height: 80vh;
-    justify-content:center;
+    justify-content: center;
     margin-top: 10vh;
-    margin-bottom:45vh;
-    color:grey;
+    margin-bottom: 45vh;
+    color: grey;
 }
 
 #blurbs h4 {
     font-size: 1.5em;
     font-weight: 500;
-    color:var(--grey);
+    color: var(--grey);
 }
 
 .blurb-item {
     width: 25vw;
     height: 150px;
-    padding:20px;
+    padding: 20px;
 }
 
 #blurbs button {
@@ -349,26 +410,37 @@ html body {
     cursor: pointer;
     transition: .1s ease
 }
+
 #blurbs button:hover {
     font-size: 1.1em;
 }
+
 /* Pop Ups */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 4; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 4;
+    /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.75); /* Black w/ opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.75);
+    /* Black w/ opacity */
 }
+
 /* Modal Content */
 .modal-content {
     background-color: #fefefe;
-    margin:100px auto;
+    margin: 100px auto;
     padding: 40px;
     border: 1px solid #888;
     width: 50%;
@@ -417,10 +489,12 @@ html body {
 #outdoors article:nth-child(2) img {
     padding-top: 50px;
 }
+
 #htip-img {
-    width:95%;
+    width: 95%;
     float: right;
 }
+
 /* ==== Contact Section === */
 
 #contact {
@@ -486,7 +560,7 @@ input,
 textarea {
     width: 439px;
     height: 27px;
-    border:none;
+    border: none;
     padding: 10px;
     margin-top: 10px;
     font-size: 0.9em;
@@ -506,17 +580,20 @@ input {
     display: block;
 }
 
-textarea, select, input, button {
+textarea,
+select,
+input,
+button {
     outline: none;
 }
 
 #submit {
-    width:100%;
+    width: 100%;
     background-color: var(--grey);
-    color:white;
+    color: white;
     text-transform: uppercase;
     font-size: 1.02em;
     padding-top: 13px;
     padding-bottom: 30px;
-    border:none;
+    border: none;
 }

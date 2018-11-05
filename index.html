@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -17,7 +20,6 @@
     <meta name="msapplication-TileColor" content="#ff0000">
     <meta name="theme-color" content="#ffffff">
     <!-- -->
-    <link rel="stylesheet" href="style.css">
 
     <title>Tersi Scientific | Charlie Webb</title>
 </head>
@@ -25,12 +27,20 @@
 <body>
     <!-- +++++++++++ Header ++++++++++++ -->
     <section id="header">
-        <div id="title">
-            <h3><span class="colored-text">Amazing innovations deserve an expert</span> that understands the challenges
-                of medical device development.</h3>
-            <hr class="colored-line">
-            <p id="author">- Charlie Webb</p>
-        </div>
+        <article class="fullBackground">
+            <!--slider 1-->
+            <div id="slider-1" class="title">
+                <h3><span class="colored-text">Amazing innovations deserve experts</span> that understands the challenges of medical device development.</h3>
+                <hr class="colored-line">
+                <p id="author">- Charlie Webb</p>
+            </div>
+            <!-- slider 2-->
+            <!-- <div id="slider-2" class="title">
+                <h3><span class="colored-text">Finding opportunities in difficult markets </span>is how we built our business.</h3>
+                <hr class="colored-line">
+                <p id="author">- Charlie Webb</p>
+            </div> -->
+        </article> 
         <!-- <div id="title-frame" class="frame-light"></div> -->
         <div class="grey-block">
             <a href="#header"><img id="header-logo" src="assets/images/Tersi-logo-orange-white.svg" alt="tersi-scientific-logo"
@@ -47,7 +57,7 @@
                     onerror="this.onerror=null; this.src='assets/images/t-logo-orange-white.png'">
                 <div id="service-grid-container">
                     <section id="service-title">
-                        <p>Meeting the innovation challenges in life science.</p>
+                        <p>Subject matter experts will lead lean innovation.</p>
                     </section>
                     <section id="service-1">
                         <p class="service-numbers">1</p>
@@ -70,17 +80,12 @@
                     <section id="service-3">
                         <p class="service-numbers">3</p>
                         <h4>Executive training </h4>
-                        <p class="body-copy">A company is only as good as the management team that guides growth.
-                            Antiquated business models sadly persist squelching market progress. Let us help reshape
-                            your
-                            corporate culture with our people first plan of action.</p>
+                        <p class="body-copy">A company is only as good as the management team that guides growth. Antiquated business models sadly persist squelching market progress. Let us reshape your corporate culture with accountable teams.</p>
                     </section>
                     <section id="service-4">
                         <p class="service-numbers">4</p>
                         <h4>Corporate refresh</h4>
-                        <p class="body-copy">Clinical Psychology is based on looking at a problem from another point of
-                            view. Let us firewall incestuous data collection and show you your company from an outside
-                            prospective. We will guide you to a better company.</p>
+                        <p class="body-copy">Clinical Psychology is based on looking at a problem from another point of view. Let us firewall incestuous data collection and show you your company from an outside prospective. Call for a free consultation.</p>
                     </section>
                 </div>
             </div>
@@ -114,13 +119,24 @@
                     <div id="about-frame" class="frame-dark"></div>
 
                     <img id="signature" src="assets\images\charlie_webb-ff-dark.png" alt="Charlie Webb's signature">
-                    <hr class="colored-line">
                 </article>
 
                 <article id="about-img">
                     <img src="assets/images/charlie-webb@2x.jpg" alt="Charlie Webb">
                 </article>
             </div>
+        </section>
+        <hr id="divider">
+        <section id="about-bottom" class="row">
+            <article id="left-about-text">
+                <p>In healthcare you need more than just a good idea.</p>
+                <hr class="colored-line">
+                <p>Competitive environment, regulatory and cost containment will drive your devices success.</p>
+            </article>
+            <article id="right-about-text" class="row">
+                <p class="body-copy">There are endless case studies of great products failing in the marketplace due to a lackluster rollout. The “Sells itself” marketing myth is a product centric distorted lens that will halt sales.  When good products, established distribution and intelligent marketing align, a product soars.</p>
+                <p class="body-copy">Nothing is more satisfying than to see your idea through fruition. This is especially satisfying when your product enhances or even saves lives. New product development in healthcare is embedded with a host of challenges that stops many inventors in their tracks. Let us help evaluate, design, develop and market your device into the complicated healthcare marketplace.</p>
+            </article>
         </section>
 
         <!-- +++++++++++ Services ++++++++++++ -->
@@ -167,17 +183,22 @@
             <p class="botNums"><span class="colored-text">09 </span>/ 24</p>
         </section>
         <!-- +++++++++++ Blurbs section ++++++++++++ -->
+        <section id="blurb-title">
+            <article>
+                 <h2 class="section-title"><span class="colored-text">Our inventions</span> For safer sterile packaging</h2>
+            </article>
+        </section>
         <section id="blurbs">
             <article class="blurb-item">
                 <img src="assets/images/viuimage-small-web1-7_orig.jpg" alt="VIU sketch" class="responsive-img">
                 <h4>Visual Inspection Unit</h4>
                 <p>The function of testing and inspecting medical pouches is so valuable it should indeed be performed
                     at the point of packaging…</p>
-                <button id="viu-rm">Read More</button>
+                <button id="viu-rm" class="popup-trigger">Read More</button>
             </article>
             <article id="viu-pop" class="modal">
                 <!-- Modal content -->
-                <div class="modal-content">
+                <div class="popup">
                     <span class="close">&times;</span>
                     <h2>Visual Inspection Unit</h2>
                     <p>The function of testing and inspecting medical pouches is so valuable it should indeed be
@@ -221,13 +242,19 @@
             </article>
 
             <article id="pouch-pop" class="modal">
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h2>​Medical Pouch testing integration</h2>
-                        <p>Delivering your medical device safe and sterile to the point of care presents with multiple regulatory and engineering challenges. We are currently working on a medical tray sealer that will integrate pouch testing within the packaging machine to provide 100% real time seal testing. This patent pending device will revolutionize the way medical devices are packaged by assuring the tray has a solid seal and that the medical device sterility is intact. We will continue to innovate in market spaces that can benefit from our unique approach to innovation in life sciences and medical device packaging.</p>
-                    </div>
-                </article>
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>​Medical Pouch testing integration</h2>
+                    <p>Delivering your medical device safe and sterile to the point of care presents with multiple
+                        regulatory and engineering challenges. We are currently working on a medical tray sealer that
+                        will integrate pouch testing within the packaging machine to provide 100% real time seal
+                        testing. This patent pending device will revolutionize the way medical devices are packaged by
+                        assuring the tray has a solid seal and that the medical device sterility is intact. We will
+                        continue to innovate in market spaces that can benefit from our unique approach to innovation
+                        in life sciences and medical device packaging.</p>
+                </div>
+            </article>
         </section>
 
         <!-- +++++++++++ Outdoors section ++++++++++++ -->
@@ -237,33 +264,24 @@
                     class="responsive-img">
                 <div id="outdoors-quote">
                     <p class="body-copy">"Escape committee thought pollution, micro-cell product development teams will
-                        build new
-                        markets."</p>
+                        build the next market changing devices."</p>
                     <p id="author">- Charlie Webb</p>
                 </div>
             </article>
 
             <article>
                 <div id="outdoors-text">
-                        <h2 class="section-title"><span class="colored-text">Cross</span><br>functional</h2>
-                    <p class="body-copy">The mahogany desk theorist consultant era is dead; this market now belongs to
-                        the
-                        adjunct working
-                        company presidents and founders. Long before flex time and free range employees was a thing, I
-                        was
-                        embarking on daily hikes engendering new devices and marketing platforms, creating paradigm
-                        shifts
-                        in medical device manufacturing. Working in the naked startup landscape of zero funding I built
-                        my
-                        medical packaging company from a homemade plywood desk in a 1200 sq. ft. mountain cabin.
-                        Industrial
-                        street smarts and a penchant for fast to market development has become my cachet.</p>
+                    <h2 class="section-title"><span class="colored-text">Life Saving</span><br>Innovation</h2>
+                    <p class="body-copy">Over 15 years ago we predicted that medical pouch visual inspection would be
+                        the industry standard for quality assurance. A recent article from Pharmaceutical & Medical
+                        Packaging news shows that our prediction was right on track. The article reports that the two
+                        most popular tests methods, each used by 80% of survey respondents, are Visual Seal Inspection
+                        per ASTM F1886  and Dye Penetration for Porous Packaging per ASTM F1929. Seeing deep into a
+                        market trajectory is a skill set that few possess. We are currently working on system that will
+                        intersect opportunity.</p>
                     <p class="body-copy">Marketing, concept development, industrial design or regulator guidance, let
-                        me
-                        brokerage my 30
-                        years of experience to help you achieve your goals. I invite you to contact me today for a
-                        no-cost
-                        consultation.</p>
+                        me brokerage my 30 years of experience to help you achieve your goals. I invite you to contact
+                        me today for a no-cost consultation.</p>
                 </div>
                 <img id="htip-img" src="assets/images/htip-with-frame.png" alt="Tersi Scientific htip" class="responsive-img">
             </article>
@@ -309,7 +327,6 @@
             </form>
         </article>
     </section>
-    <script src="assets/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
-
 </html>

@@ -1,16 +1,3 @@
-// $(function() {
-//     var divs = $('div[id^="slider-"]').hide(),
-//     i = 0;
-
-// (function cycle() { 
-//     divs.eq(i).fadeIn(500)
-//               .delay(5000)
-//               .fadeOut(500, cycle);
-
-//     i = ++i % divs.length; // increment i, 
-//                            //   and reset to 0 when it equals divs.length
-// })();
-// });
 // header slider images //
 const bgImages = [
     "assets/images/stent-header-bg.jpg",
@@ -29,67 +16,62 @@ const cycleImages = (images, container, step) => {
 
 cycleImages(bgImages, node, 6000)
 
-// Popup Test 2 //
+////////////////// Pop Up Script ////////////////////
 
-var scrollTop = '';
-var newHeight = '100';
+var modal = document.getElementById('viu-pop'); // Get the modal
+var btn = document.getElementById("viu-rm"); // Get the button that opens the modal
+var span = document.getElementById("close1"); // Get the <span> element that closes the modal
 
-$(window).bind('scroll', function() {
-   scrollTop = $( window ).scrollTop();
-   newHeight = scrollTop + 100;
-});
+// When the user clicks the button, open the modal 
+btn.onclick = function () {
+    modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+    modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}//end of first modal
 
-$('.popup-trigger').click(function(e) {
-   e.stopPropagation();
- if(jQuery(window).width() < 767) {
-   $(this).after( $(this).nextAll('.popup:first') );
-   $(this).nextAll('.popup:first').show().addClass('popup-mobile').css('top', 0);
-   $('html, body').animate({
-        scrollTop: $(this).nextAll('.popup:first').offset().top
-    }, 500);
- } else {
-     $('.popup').hide();
-     $(this).nextAll('.popup:first').removeClass('popup-mobile').css('top', newHeight).toggle();
- };
-});
+var modal2 = document.getElementById('iceCream-pop'); // Get the modal
+var btn2 = document.getElementById('iceCream-rm'); // Get the button that opens the modal
+var span2 = document.getElementById('close2'); // Get the <span> element that closes the modal
 
-$('html').click(function() {
- $('.popup').hide();
-});
-
-$('.popup-btn-close').click(function(e){
-  $(this).parent().hide();
-});
-
-$('.popup').click(function(e){
-  e.stopPropagation();
-});
-
-
-
-//////////////////Old Pop Up Script////////////////////
-
-// // Get the modal
-// var modal = document.getElementById('viu-pop');
-// // Get the button that opens the modal
-// var btn = document.getElementById("viu-rm");
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-
-// // When the user clicks the button, open the modal 
-// btn.onclick = function () {
-//     modal.style.display = "block";
-// }
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function () {
-//     modal.style.display = "none";
-// }
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function (event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//     }
-// }
-
+// When the user clicks the button, open the modal 
+btn2.onclick = function () {
+    modal2.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span2.onclick = function () {
+    modal2.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}//end of second modal
     
+var modal3 = document.getElementById('pouch-pop'); // Get the modal
+var btn3 = document.getElementById('pouch-rm'); // Get the button that opens the modal
+var span3 = document.getElementById('close3'); // Get the <span> element that closes the modal
+
+// When the user clicks the button, open the modal 
+btn3.onclick = function () {
+    modal3.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span3.onclick = function () {
+    modal3.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal3) {
+        modal3.style.display = "none";
+    }
+} //end of third modal
 

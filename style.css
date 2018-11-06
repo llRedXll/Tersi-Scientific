@@ -20,8 +20,6 @@ html body {
     display: -ms-flexbox;
     display: -webkit-flex;
 
-    -webkit-flex-flow: row wrap;
-
 }
 
 .column {
@@ -42,7 +40,7 @@ html body {
     height: 100vh;
     color: white;
     display: flex;
-    transition: all 2000ms ease-in-out 0s;
+    transition: all 2000ms ease-in-out 2000ms;
 }
 
 #header-logo {
@@ -191,8 +189,8 @@ html body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 40px 40px;
-    grid-template-areas: "service-title service-1 service-2"
-        "service-title service-3 service-4";
+    /* grid-template-areas: "service-title service-1 service-2"
+        "service-title service-3 service-4"; */
 }
 
 #service-title {
@@ -267,10 +265,12 @@ html body {
     margin-left: -10px;
     padding: 20px 0;
 }
+
 #divider {
     border: 1px solid rgba(0, 0, 0, .05);
-    width:85vw;
+    width: 85vw;
 }
+
 /* about bottom text */
 #about-bottom {
     padding: 4% 8% 6%;
@@ -408,7 +408,8 @@ html body {
     font-size: 1.01em;
     color: var(--main);
     cursor: pointer;
-    transition: .1s ease
+    transition: .1s ease;
+    background: none;
 }
 
 #blurbs button:hover {
@@ -596,4 +597,62 @@ button {
     padding-top: 13px;
     padding-bottom: 30px;
     border: none;
+}
+
+/* ======= Responsive =======*/
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .title {
+        width: 90vw;
+        left: 5%;
+    }
+
+    .grey-block {
+        max-width: 100vw;
+    }
+
+    #service-grid-container {
+        padding: 20% 20%;
+        grid-template-columns: 1fr;
+    }
+
+    #about-div {
+        display: initial;
+    }
+
+    #about-img img {
+        height: 55vh;
+    }
+
+    #about-frame {
+        height: 0;
+    }
+
+    .row {
+        display: block;
+    }
+
+    #service-grid {
+        display: block;
+        width: auto;
+        position: initial;
+    }
+
+    .blurb-item {
+        width: auto;
+        height: auto;
+    }
+
+    #blurb-title {
+        text-align: left;
+        padding: 4% 12%;
+        margin-bottom: -90px;
+    }
+    
 }

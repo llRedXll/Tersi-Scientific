@@ -1,7 +1,8 @@
 // header slider images //
 const bgImages = [
     "assets/images/stent-header-bg.jpg",
-    "assets/images/header-bg.jpg"
+    "assets/images/header-bg.jpg",
+    "assets/images/charlie-header-bg.jpg"
 ]
 const node = document.getElementById("header");
 
@@ -75,3 +76,21 @@ window.onclick = function (event) {
     }
 } //end of third modal
 
+
+var header = document.getElementById('header');
+var image = window.getComputedStyle(header);
+console.log(image);
+
+
+//////////////////////
+////////jquery////////
+//////////////////////
+
+// $(function() {
+
+//     var img = $('#header').css('background');
+//     img = img.replace(/(url\(|\)|")/g, '');
+//     console.log(img);
+    
+
+// });

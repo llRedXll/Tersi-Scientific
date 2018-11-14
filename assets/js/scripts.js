@@ -1,21 +1,21 @@
 // header slider images //
-const bgImages = [
-    "assets/images/stent-header-bg.jpg",
-    "assets/images/header-bg.jpg",
-    "assets/images/charlie-header-bg.jpg"
-]
-const node = document.getElementById("header");
+// const bgImages = [
+//     "assets/images/stent-header-bg.jpg",
+//     "assets/images/header-bg.jpg",
+//     "assets/images/charlie-header-bg.jpg"
+// ]
+// const node = document.getElementById("header");
 
-const cycleImages = (images, container, step) => {
-    images.forEach((image, index) => (
-        setTimeout(() => {
-            container.style.backgroundImage = `url(${image})`
-        }, step * (index + 1))
-    ))
-    setTimeout(() => cycleImages(images, container, step), step * images.length)
-}
+// const cycleImages = (images, container, step) => {
+//     images.forEach((image, index) => (
+//         setTimeout(() => {
+//             container.style.backgroundImage = `url(${image})`
+//         }, step * (index + 1))
+//     ))
+//     setTimeout(() => cycleImages(images, container, step), step * images.length)
+// }
 
-cycleImages(bgImages, node, 6000)
+// cycleImages(bgImages, node, 6000)
 
 ////////////////// Pop Up Script ////////////////////
 
@@ -36,7 +36,7 @@ window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-}//end of first modal
+} //end of first modal
 
 var modal2 = document.getElementById('iceCream-pop'); // Get the modal
 var btn2 = document.getElementById('iceCream-rm'); // Get the button that opens the modal
@@ -55,8 +55,8 @@ window.onclick = function (event) {
     if (event.target == modal2) {
         modal2.style.display = "none";
     }
-}//end of second modal
-    
+} //end of second modal
+
 var modal3 = document.getElementById('pouch-pop'); // Get the modal
 var btn3 = document.getElementById('pouch-rm'); // Get the button that opens the modal
 var span3 = document.getElementById('close3'); // Get the <span> element that closes the modal
@@ -75,22 +75,3 @@ window.onclick = function (event) {
         modal3.style.display = "none";
     }
 } //end of third modal
-
-
-var header = document.getElementById('header');
-var image = window.getComputedStyle(header);
-console.log(image);
-
-
-//////////////////////
-////////jquery////////
-//////////////////////
-
-// $(function() {
-
-//     var img = $('#header').css('background');
-//     img = img.replace(/(url\(|\)|")/g, '');
-//     console.log(img);
-    
-
-// });
